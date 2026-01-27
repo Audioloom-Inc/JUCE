@@ -775,10 +775,10 @@ public:
 
                     if (newBypass != currentlyBypassed)
                     {
-                        if (bypassParam != nullptr)
-                            bypassParam->setValueNotifyingHost (newBypass ? 1.0f : 0.0f);
-                        else
-                            isBypassed = newBypass;
+                        // if (bypassParam != nullptr)
+                        //     bypassParam->setValueNotifyingHost (newBypass ? 1.0f : 0.0f);
+                        // else
+                        //     isBypassed = newBypass;
 
                         if (! currentlyBypassed && IsInitialized()) // turning bypass off and we're initialized
                             Reset (0, 0);
