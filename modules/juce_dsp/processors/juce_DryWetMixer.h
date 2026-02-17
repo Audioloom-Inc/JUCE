@@ -107,6 +107,9 @@ public:
     */
     void mixWetSamples (AudioBlock<SampleType> wetSamples);
 
+    /**/
+    bool isSmoothing () const;
+    
 private:
     //==============================================================================
     void update();
@@ -122,5 +125,11 @@ private:
     double sampleRate = 44100.0;
     int maximumWetLatencyInSamples = 0;
 };
+
+template <typename SampleType>
+inline bool DryWetMixer<SampleType>::isSmoothing() const
+{
+    return dryVolume.isSmoothing() || wetVolume.isSmoothing();
+}
 
 } // namespace juce::dsp
