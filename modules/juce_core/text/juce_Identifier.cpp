@@ -133,7 +133,7 @@ String Identifier::createFlagString (int flags)
     if (flags == None)
         return "";
     
-    return FlagIdentifier + (String)flags;
+    return String (FlagIdentifier) + String (flags);
 }
 
 
